@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script>function validateForm(){
+        var username=document.forms["loginForm"] ["username"].value;
+        var password=document.forms["loginForm"] ["password"].value;
+        if(username==""||password==""){
+            alert("please fill in all fields");
+            return false;
+        }
+        if(username==="your Username"&& password==="your Password"){
+            alert("Login Successful!");
+        }else{
+            alert("Oops! wrong username or password.Please try again.")
+        }
+    }
+    </script>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <Form name="loginForm"
+    onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <br>
+    <br>
+    <input type="submit" value="Login">
+</Form>
+    
+    
+</body>
+</html>
